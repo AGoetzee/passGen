@@ -39,7 +39,12 @@ def create_charset(inc_lowers, inc_uppers, inc_spec_chars, inc_num):
     return c
 
 
+def run(params=(True, True, True, True), length=8):
+    charset = create_charset(*params)
+    pwd = create_pwd(charset, length=length)
+    return pwd
+
+
 if __name__ == '__main__':
-    charset = create_charset(INCLUDE_LOWERS, INCLUDE_UPPERS, INCLUDE_SPECIAL_CHARS, INCLUDE_NUMBERS)
-    for i in range(NUMBER_OF_PWD + 1):
-        print(create_pwd(charset, LENGTH))
+    for i in range(NUMBER_OF_PWD):
+        print(run(params=(INCLUDE_LOWERS, INCLUDE_UPPERS, INCLUDE_SPECIAL_CHARS, INCLUDE_NUMBERS), length=LENGTH))
