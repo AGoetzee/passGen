@@ -1,4 +1,5 @@
 import numpy as np
+__author__ = "Arthur Goetzee"
 
 # Default values
 NUMBER_OF_PWD = 3
