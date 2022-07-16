@@ -24,7 +24,7 @@ while True:
     if event == sg.WIN_CLOSED or event == 'Quit':  # if user closes window or clicks cancel
         break
 
-    pwd = GenPwd.run((values['-upper-'], values['-lower-'], values['-special-'], values['-numbers-']),
+    pwd = GenPwd.run((values['-lower-'], values['-upper-'], values['-special-'], values['-numbers-']),
                      int(values['-length-']))
     print(pwd)
 
